@@ -21,6 +21,7 @@
 ```sql
 CREATE DATABASE user_service_db;
 CREATE DATABASE user_history_db;
+```
 
 Создание таблиц
 Для user-service:
@@ -29,11 +30,13 @@ CREATE DATABASE user_history_db;
 
 \c user_service_db
 
+```sql
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
   email VARCHAR(100) NOT NULL UNIQUE
 );
+```
 
 Для user-history-service:
 
@@ -41,6 +44,7 @@ CREATE TABLE users (
 
 \c user_history_db
 
+```sql
 CREATE TABLE user_actions (
   id SERIAL PRIMARY KEY,
   user_id INT REFERENCES users(id),
@@ -48,6 +52,7 @@ CREATE TABLE user_actions (
   action_details TEXT NOT NULL,
   action_date TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
+```
 
 ### Запуск сервисов
 Запуск сервисов
@@ -58,22 +63,26 @@ user-service
 
 cd user-service/
 npm install
+
 Затем запустите сервис:
 
 npm start
 user-history-service
+
 Перейдите в каталог user-history-service и установите зависимости:
 
 cd user-history-service/
 npm install
+
 Скомпилируйте TypeScript в JavaScript:
 
 npm run build
+
 И запустите скомпилированный код:
 
 npm start
 
-Запуск обоих сервисов одновременно (для разработки)
+### Запуск обоих сервисов одновременно (для разработки)
 Для удобства разработки можно запустить оба сервиса одновременно.
 npm run start:dev
 
