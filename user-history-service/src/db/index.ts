@@ -1,7 +1,11 @@
-const express = require('express');
-const userRoutes = require('./src/routes/userRoutes');
+import { Pool } from 'pg';
 
-const app = express();
-app.use(express.json());
+const pool = new Pool({
+  user: 'yourUsername',
+  host: 'localhost',
+  database: 'user_history_db',
+  password: 'yourPassword',
+  port: 5432,
+});
 
-app.use('/api', userRoutes);
+export default pool;
