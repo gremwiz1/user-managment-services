@@ -91,3 +91,18 @@ npm start
 npm run start:dev
 
 
+## API Endpoints
+
+### user-service
+
+Следующие эндпоинты доступны для `user-service`:
+
+- `POST /api/create-user`: Создание нового пользователя. Требуется JSON в теле запроса с полями `name` и `email`.
+- `PUT /api/update-user/:id`: Обновление данных пользователя по `id`. Требуется JSON в теле запроса с полями `name` и/или `email`.
+- `GET /api/users`: Получение списка всех пользователей.
+
+### user-history-service
+
+Следующие эндпоинты доступны для `user-history-service`:
+
+- `GET /api/user-actions`: Получение истории действий пользователя. Поддерживает параметры запроса `userId`, `page` и `pageSize` для фильтрации и пагинации.
