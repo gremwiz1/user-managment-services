@@ -72,8 +72,8 @@ npm install
 Затем запустите сервис:
 ```bash
 npm start
-user-history-service
 ```
+user-history-service
 
 Перейдите в каталог user-history-service и установите зависимости:
 ```bash
