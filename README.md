@@ -64,32 +64,38 @@ CREATE TABLE user_actions (
 
 user-service
 Перейдите в каталог user-service и установите зависимости:
-
+```bash
 cd user-service/
 npm install
+```
 
 Затем запустите сервис:
-
+```bash
 npm start
 user-history-service
+```
 
 Перейдите в каталог user-history-service и установите зависимости:
-
+```bash
 cd user-history-service/
 npm install
+```
 
 Скомпилируйте TypeScript в JavaScript:
-
+```bash
 npm run build
+```
 
 И запустите скомпилированный код:
-
+```bash
 npm start
+```
 
 ### Запуск обоих сервисов одновременно (для разработки)
 Для удобства разработки можно запустить оба сервиса одновременно.
+```bash
 npm run start:dev
-
+```
 
 ## API Endpoints
 
